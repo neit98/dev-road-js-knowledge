@@ -1,0 +1,5 @@
+- khi trang được tải lần đầu tiên, size của tất cả các tập lệnh js ko nén <= 200kb;
+- khi trang được tải lần đầu tiên, size của tất cả các tài nguyên css ko nén <= 100kb;
+- theo giao thức http, số lượng tài nguyên được yêu cầu <= 6
+- theo giao thức http /2, số luọng tài nguyên được yêu cầu <= 20;
+- 90% code phải được sử dụng.
