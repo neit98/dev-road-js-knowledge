@@ -1,0 +1,3 @@
+Vue Component vs Vue Instance
+- vue comp: represents a set of rules for getting content on the screen and how users can interact with it
+- vue instance: an instance of a vue comp

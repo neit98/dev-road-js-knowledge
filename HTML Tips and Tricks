@@ -1,0 +1,35 @@
+HTML Tips and Tricks
+------------------------------------------------------------------------------------
+.container { 
+	width: 100vw; 
+	height: 100vh; 
+} 
+
+Makes the container 100% of the viewport height and 100% of the viewport width. Can be handy when creating containers you want to take up the full height of the window.
+------------------------------------------------------------------------------------
+.container { 
+	display: flex; 
+	justify-content: center; 
+	align-items: center; 
+} 
+
+Centers everything in the container both vertically and horizontally
+------------------------------------------------------------------------------------
+.container { 
+	border: 1px solid gray; 
+} 
+.container .row:not(:last-child) { 
+	border-bottom: 1px solid gray; 
+} 
+
+Gives every row inside of the container a bottom border, except for the last one. This helps keep the bottom of the container from having two borders, one from the last row and the one from the container.
+------------------------------------------------------------------------------------
+.row:hover:not(.active-class) { 
+  background: gray; 
+} 
+   
+Hovering a row will give it a gray background, unless it has the .active-class. This is great if you gave .active-class to one of the row and want to show that you can click on the others, but can't on the one that's 'active'.
+------------------------------------------------------------------------------------
+Generate html tag multiple times
+
+Ex: figure.gallery__item.gallery__item--$>img.gallery__img[src="img/gal-$.jpeg"][alt="Gallery image $"])*14

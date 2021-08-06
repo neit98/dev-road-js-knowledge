@@ -1,0 +1,150 @@
+JavaScript & HTML/CSS Tips and Tricks
+------------------------------------------------------------------------------------
+- For Multiple Conditions, use Array.includes
+
+const checkCarModel = (model) => {
+  const models = ['vinfast fadil', 'Hyundai Accent'];
+
+  if(models.includes(model)) {
+    console.log('model valid');
+  }
+}
+
+checkCarModel('vinfast fadil'); // outputs 'model valid'
+------------------------------------------------------------------------------------
+- Reduces if/else
+
+const checkModel = ({model, year} = {}) => {
+  if(!model && !year) return 'No car';
+  if(!model) return 'No car model';
+  if(!year) return 'No car year';
+
+  // here we are free to do whatever we want with the model or year
+  // we made sure that they exist
+  // no more checks required
+
+  // doSomething(model);
+  // doSomethingElse(year);
+
+  return `Car model: ${model}; Manufacturing year: ${year};`;
+}
+------------------------------------------------------------------------------------
+- Use Indexing or Maps Instead of switch statement
+
+
+const carState = {
+  usa: ['Ford', 'Dodge'],
+  france: ['Renault', 'Peugeot'],
+  italy: ['Fiat']
+};
+
+const getCarsByState = (state) => {
+  return carState[state] || [];
+}
+------------------------------------------------------------------------------------
+Assignment Operators
+
+if (sense === null || sense === undefined) {
+sense = 'Learn Programing'
+}
+
+=> sebse ??= 'Learn Programing'
+
+let person = 'Knows Programing'
+
+if (person) {
+  person = 'Sensible'
+}
+
+=> person &&= 'Sensible'
+
+if (!sense) { sense = 'Learn Programing'}
+=> sense ||= 'Learn Programing'
+
+The important difference between ??= and ||= is that the initial one checks the value for both null or undefined the other checks just for a falsy value.
+------------------------------------------------------------------------------------
+let number = 152000000000 => let newNumber = 152_000_000_000
+------------------------------------------------------------------------------------
+From number to an array of digits
+use the spread operator, the map method, and the method parseInt()
+
+const toArray = num => [...`${num}`].map(el => parseInt(el))
+------------------------------------------------------------------------------------
+check if properties are defined inside an object or if elements are included inside an array
+
+const employee = {
+  name: "Chris",
+  age: 25
+}
+"name" in employee; //returns true.
+"age" in employee;  //returns true.
+"experience" in employee; //returns false.
+------------------------------------------------------------------------------------
+Extract unique values
+
+const languages = ['JavaScript', 'Python', 'Python', 'JavaScript', 'HTML', 'Python'];
+const uniqueLanguages = [...new Set(languages)];
+console.log(uniqueLanguages);
+//prints: ["JavaScript", "Python", "HTML"]
+------------------------------------------------------------------------------------
+Hoisting is about how the JavaScript engine parses and executes your code and the “availabililty” of functions and variables.
+------------------------------------------------------------------------------------
+for ... in use for iterate all enumerable props of object, includes enumerable props is extended. used with String, Array, simple Object. cannot used
+with Map() or Set()
+for ... of use for iterate with iterable objects, iterate value not prop
+forEach is one method of Array prototype, allow iterate elements of array
+------------------------------------------------------------------------------------
+const findAndRemove = (arr, value, key = null) => {
+  const index = arr.findIndex((obj) =>
+    !!obj[key] ? obj[key] === value : obj === value
+  );
+  return index >= 0 ? [...arr.slice(0, index), ...arr.slice(index + 1)] : arr;
+};
+------------------------------------------------------------------------------------
+const getIndexes = (arr, test) => {
+  if (typeof test === 'function') {
+    return arr.reduce((indices, element, index) => {
+      if (test(element)) indices.push(index);
+      return indices;
+    }, []);
+  } else {
+    return arr.reduce((indices, element, index) => {
+      if (element === test) indices.push(index);
+      return indices;
+    }, []);
+  }
+};
+------------------------------------------------------------------------------------
+const distinct = (arr, selector) => {
+  if (selector === 'undefined') {
+    return [...new Set(arr)];
+  }
+};
+------------------------------------------------------------------------------------
+const limit = (arr, c) => {
+  return arr.filter((x, i) => {
+    if (i <= c - 1) {
+      return true;
+    }
+  });
+};
+
+const skip = (arr, c) => {
+  return arr.filter((x, i) => {
+    if (i > c - 1) {
+      return true;
+    }
+  });
+};
+------------------------------------------------------------------------------------
+const getUnique = (arr, comp) => {
+  const unique = arr
+    .map((e) => e[comp])
+    .map((e, i, final) => final.indexOf(e) === i && i)
+    .filter((e) => arr[e])
+    .map((e) => arr[e]);
+  return unique;
+};
+------------------------------------------------------------------------------------
+delete HTML tag
+const stripHTMLTags = str => str.replace(/<[^>]*>/g, '');

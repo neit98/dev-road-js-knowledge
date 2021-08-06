@@ -1,0 +1,5 @@
+NodeJS Learning
+------------------------------------------------------------------------------------
+Mongoose
+statics vs methods
+statics are the methods defined on the Model. methods are defined on the document (instance)

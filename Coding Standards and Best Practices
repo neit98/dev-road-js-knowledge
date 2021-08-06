@@ -1,0 +1,59 @@
+Coding Standards and Best Practices
+-----------------------------------------------------------------------------------
+Refrain to use css Float
+Detail:
+- There is very rarely a need to use float to accomplish a layout positioning. In many cases, float may interrupt existing layouts so please refrain from using it.
+- Become more comgortable using display: flex and its associated prop to accomplish the same things.
+- It's okay to use percentage widths, but here it is oversued with so many seemingly random values. Flexbox can again help laying out fixed width elements and dynamic width elements together without having to define the width of all elements to a specific percentage. Perhaps start with defining the width of one element and have the sibling elements grow or shrink to accommodate.
+-----------------------------------------------------------------------------------
+use display:flex and its associated properties.
+- When creating or updating a layout of an Argo component, we recommend learning how to use flexbox. It's okay to use percentage widths, but there are many instances where it is overused with so many random values at different breakpoints. This makes the code very messy and complicated, and it doesn't guarantee that the UI will look correct in every viewport. Flexbox can help with laying out fixed width elements and dynamic width elements together without having to define the width of all elements to a specific percentage.
+-----------------------------------------------------------------------------------
+Using Flexbox when possible
+- Using flexbox for more flexible styling instead using float and arbitrary percentages
+instead of setting these percentages for width, could we try to use flex box?
+-----------------------------------------------------------------------------------
+Use position:relative rather than positon:absolute since it is more responsive
+- "There are better ways to accomplish arranging layout without using empty elements/placeholders.
+My suggestion for the lower viewports is to update the FeaturedModelNativeAd to use position: relative instead of the current position: absolute. The end goal is to have the height of the blue box be dynamic in height at lower viewports, but NOT to have the elements jump around during loading".
+-----------------------------------------------------------------------------------
+Use container component for spacing and margin
+- Spacing and margin for button must no be accomplished by own button. It should be taken care by its container.
+-----------------------------------------------------------------------------------
+Use display: flex instead of display: flow-root
+-----------------------------------------------------------------------------------
+// Bad
+flex-grow: 1;
+flex-shrink: 1;
+flex-basis: 100px;
+
+// Good
+flex: 1 1 100px;
+
+// Bad
+margin: 2px 2px 2px 2px;
+padding: 10px 10px 2px 2px;
+
+// Good
+margin: 2px;
+padding: 10px 2px;
+-----------------------------------------------------------------------------------
+// Bad
+styled('div')``
+
+// Good
+styled.div``
+style.span``
+style.button``
+-----------------------------------------------------------------------------------
+Check null before accessing window object (because of SSR)
+-----------------------------------------------------------------------------------
+- The component should have displayName and defaultProps attr
+-----------------------------------------------------------------------------------
+Convention
+- Tạo ra 1 comp mới: tìm cách sử dụng ui-lib trc khi cố gắng style 1 cái gì đó.
+- Design: Hỏi kỹ yêu cầu về design trên từng 'Viewport' tránh việc feedback rôi comment
+- Test data: Nên test hết tất cả các items xem data đã hiển thị cho từng items đã đúng chưa.
+- Importing component: Import trực tiếp comp cần sử dụng, hạn chế sử dụng import từ comp chung.
+- Lightouse Performance: Đo perf trc và sau khi code.
+- Fallback data: Dùng fallback data trong resolver thay vì dùng const

@@ -1,0 +1,11 @@
+NextJS
+------------------------------------------------------------------------------------
+Adding Component-Level CSS
+Next.js supports CSS Modules using the [name].module.css file naming convention.
+CSS Modules locally scope CSS by automatically creating a unique class name. This allows you to use the same CSS class name in different files without
+worrying about collisions.
+
+This behavior makes CSS Modules the ideal way to include component-level CSS. CSS Module files can be imported anywhere in your application.
+CSS Modules are an optional feature and are only enabled for files with the .module.css extension.
+In production, all CSS Module files will be automatically concatenated into many minified and code-split .css files. These .css files represent hot
+execution paths in your application, ensuring the minimal amount of CSS is loaded for your application to paint.

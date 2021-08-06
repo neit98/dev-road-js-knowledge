@@ -1,0 +1,104 @@
+Interview question
+
+- What is difference between callbacks, promises and async/await?
+callbacks are functions passed as arguments into other functions to make sure mandatory variables are available within callback-function's scope
+promises are placeholder objects for data that's available in the future. As soon as their state changes from pending to resloved, .then() method can
+ be called to make the data available for subsequent operations.
+async/await is syntactic sugar over promises. Instead of using .then(), u can assign data that's resolved by a promise and assign it to a variable
+which is available within an async func() scope
+async/await simply gives you a synchronous feel to asynchronous code. It's a very elegant from of syntactical sugar
+------------------------------------------------------------------------------------
+should i use promises or async-await:
+await is used for calling an async func and waits for it to resolve or reject.
+await blocks the execution of the code within the async func in which it is located.
+if the output of func2 is dependent on the output of func1 => use await.
+if two funcs can be run in parallel, create two different async funcs and then run them in parallel.
+run promises in parallel, create an arr of promises and then use Promise.all(promisesArr).
+everytime use await remember that we are writing blocking code. Over time we tend to neglect this.
+------------------------------------------------------------------------------------
+- What is CORS and CORS headers?
+CORS is an HTTP-header based mechanism that allows a server to indicate any other origins (domain, scheme, or port) than its own from which a browser
+should permit loading of resources.
+------------------------------------------------------------------------------------
+- How about ReactJS src code structure?
+- Can u explain life cycle comp?
+- Should we use componentWillReceiveProps? (not recommend)
+------------------------------------------------------------------------------------
+- How many scope in JavaScript? 3 (Function/local scope, global scope, block scope)
+Global scope: variables defined outside of any function or other block statement like if
+Function scope: variables defined with var inside of a function
+Block scope: variables defined with const and let in any block (like if, for etc)
+------------------------------------------------------------------------------------
+- How about 'let' and 'var'? What is difference between them?
+var is function scoped and let is block scoped
+
+- How about 'await' and 'async'? Difference with 'promise'?
+- What is the 'await' use for?
+- Can use 'await' without 'async'?
+
+- What is defference 'filter' and 'map'
+filter return less or equal array elements, map just equal.
+filter return the same data type, map may be difference.
+------------------------------------------------------------------------------------
+- How about package.json and package-lock.json? What's difference?
+package-lock.json is created for locking the dependency with the installed version.
+Purpose: to avoid differences in installed dependencies on different environments and to generate the same results on every environments we should use
+the package-lock.json file to install dependencies.
+------------------------------------------------------------------------------------
+- What is the VDOM?
+- How Redux work?
+------------------------------------------------------------------------------------
+- What is dispatch function?
+dispatch is a function of the redux store. You call store. dispatch to dispatch an action. This is the only way to trigger a state change. With react
+redux, your components never access the store directly - connect does it for you
+------------------------------------------------------------------------------------
+- Where is call API in ReactJS application?
+- What is the takeEvery and takeLastest? What's diff?
+------------------------------------------------------------------------------------
+- What's the 'use trict'?
+indicate that the code should be executed in 'strict mode'.
+Strict mode makes several changes to normal JavaScript semantics:
+eliminates some JS silent errors by changeing them to throw erros.
+fixes mistakes that it difficult for JS engines to perform optimizations: strict mode code can sometimes be made to run faster than identical code
+that's not strict mode.
+prohibits some syntax likely to be defined in the future versions of ECMAScript.
+------------------------------------------------------------------------------------
+- How about the last project that you've worked? Can u explain about it?
+- What the feature's u worked?
+- How many ways to communicate among components?
+- What do u understand about 'setState'?
+- What's the 'stateless' and 'statefull'?
+- Tell about 'flex box' in css?
+------------------------------------------------------------------------------------
+- Difference slice and substr ?
+substr:
+if start > stop, will swap those 2 args.
+if either arg is negative or is NaN, it is treated as if it were 0.
+slice:
+if start > stop, will return the empty string.
+if start is negative: sets char from the end of string, exactly like substr
+if stop is negative: sets stop to: string.length - Math.abs(stop) (original value), except bounded at 0.
+------------------------------------------------------------------------------------
+- REM and EM?
+While em is relative to the font-size of its direct or nearest parent, rem is only relative to the html(root) font-size.
+px at the Root, rem for Components, em for Text Elements
+------------------------------------------------------------------------------------
+Explain to me how OOP works in JavaScript. This is going to involve a conversation about prototype inheritance, closures, and lexical scoping.
+------------------------------------------------------------------------------------
+Describe how you would develop a single-page application without using a framework (this one is more of a discussion and covers performance and the
+memory leaks Dean mentioned).
+------------------------------------------------------------------------------------
+JavaScript is a functional programming language. Give me an example of how you can use higher order functions in JavaScript to iterate over and apply
+a function to every element in an array. Do not use a for or while loop.
+------------------------------------------------------------------------------------
+Higher-order-functions?
+Higher-order-functons are functions that take other functions as arguments or return functions as their results.
+Taking an other function as an argument is often referred as a callback function, because it is called back by the higher-order-function.
+Adv is composition. We can create smaller functions that only take care of one piece of logic. Then, we compose more complex functions by using
+different smaller functions.
+This technique reduces bugs and makes our code easier to read and understand
+------------------------------------------------------------------------------------
+how u check authentication in reactjs project
+------------------------------------------------------------------------------------
+do u know lodash, some popular method of lodash u use
+------------------------------------------------------------------------------------
