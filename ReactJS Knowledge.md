@@ -17,3 +17,26 @@
 | Can change inside Component | No | Yes |
 | Can set initial value for child comp ? | Yes | Yes |
 | Can change in child comp ? | Yes | No |
+
+-------------
+### useLayoutEffect
+- useEffect will run after render comp.
+- useLayoutEffect will run before update UI.
+- should use useLayoutEffect when have issue loading in DOM.
+
+-------------
+### func comp vs class comp
+- func comp will re-render when parent comp re-render
+#### Purpose of react hooks
+
+* no **super** (props)
+* no **this**
+* maintain & look code easier
+* custom hooks
+
+| **props**  | **state** |
+|:---------------:| -----:|
+|A func comp is just a plain js func that accepts props as an argument and returns a React element.|A class comp requires u to extend from React.Comp and create a render func which returns a React element.
+|No render method used in func comp|Must have the render() method returning html.|
+|stateless comp => accept data & display|stateful comp => imp logic & state|
+|Don't have React lifecycle method => react hooks help func comp have lifecycle.|Have React lifecycle methods.|
