@@ -1,0 +1,11 @@
+Difference between v-if and v-show
+- v-if only renders the element to the DOM if the expression passes whereas v-show renders all elements to the DOM and then uses the CSS display prop
+to show/ hide elements based on expression.
+- v-if has higher toggle costs while v-show has higher initial render costs
+------------------------------------------------------------------------------------
+What is dynamic route matching
+- dynamic route matching to map routes to the same comp based on a pattern.
+------------------------------------------------------------------------------------
+Purpose of keep alive tag
+- Keep-alive tag is an abstract comp used to preserve comp state or aviod re-rendering. When you wrapped tag around a dynamic comp, it caches the
+inactive comp instances without destroying them.

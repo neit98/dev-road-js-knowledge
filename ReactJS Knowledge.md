@@ -40,3 +40,18 @@
 |No render method used in func comp|Must have the render() method returning html.|
 |stateless comp => accept data & display|stateful comp => imp logic & state|
 |Don't have React lifecycle method => react hooks help func comp have lifecycle.|Have React lifecycle methods.|
+
+-------------
+### major features of ReactJS
+
+#### The major features of React are:
+
+* It uses **VirtualDom** instead of RealDom considering that RealDOM manipulations are expensive.
+* Supports server-side rendering.
+* Follows Unidirectional data flow or data binding.
+
+-------------
+### redux
+- The state in redux is stored in memory. This means that, if u refresh the page the state gets wiped out. The state in redux just a variable that persists in memory because it is referenced by all redux functions
+- Difference between state management and state persistence. Lib like Redux and Vuex usually keep track of your variables and provide tools for changing state (reducers, specifically) - but they dont manage the persistence of that state. Persistence refers to saving the state somewhere to reload it the next time someone comes to your app.
+- Persistence is usually coded by hand (send the state to an API endpoint which saves it to a database, then when you reload the page you ping a different API endpoint to retrieve the state) or you utilize a plugin / module for your state manager to handle persistence for you. Like Redux Local Storage  

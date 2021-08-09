@@ -4,3 +4,7 @@ Vue Component vs Vue Instance
 ------------------------------------------------------------------------------------
 communicate from parent to child by passing props
 comminicate from child to parent by emitting events
+------------------------------------------------------------------------------------
+vuex
+- vuex is a state management pattern + lib for vuejs app. It serves as a centralized store for all the comps in an app, with rules ensuring that the
+the state can only be mutated in a predictable fashion.
