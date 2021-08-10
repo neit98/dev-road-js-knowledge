@@ -1,0 +1,55 @@
+TypeScript Knowledge
+------------------------------------------------------------------------------------
+Overview
+What is TypeScript
+Benefit of TypeScript
+TypeScript in React
+Class & Hook & Redux with TypeScript
+Conclusion
+------------------------------------------------------------------------------------
+What is TypeScript 
+đc phát triển bởi Microsoft, != js ở chỗ là bổ sung kiểu tĩnh và lớp hướng đối tượng.
+TypeScript sử dụng đc tất cả tính năng của ES6 như classes, modeule
+------------------------------------------------------------------------------------
+Pros of TypeScript
+Tại sao nên sử dụng ts ?
++ Hô trợ các tính năng của Javascript phiên bản mới nhất
++ Là mã nguồn mở
++ TypeScript là Javscript
+Cons of TypeScript
++ nếu file .js muốn chạy đc ts => phải dùng compile
++ thiết lập cồng kềnh
+
+
+------------------------------------------------------------------------------------
+src
+- https://topdev.vn/blog/so-sanh-typescript-voi-javascript/
+- https://fettblog.eu/typescript-react/
+- https://github.com/piotrwitek/react-redux-typescript-guide#--usestate
+- https://github.com/typescript-cheatsheets/react#reacttypescript-cheatsheets
+------------------------------------------------------------------------------------
+The TS Type System
++ Helps us catch erros during development
++ Use 'type annotations' to analyze our code
++ Only active during development
++ Doesn't provide any performance optimization
+------------------------------------------------------------------------------------
+Why do we care about types?
++ Types are used by the Typescript Compiler to analyze our code for errors
++ Types allow other engineers to understand what values are flowing around our codebase
+------------------------------------------------------------------------------------
+Tuples: Array-like structure where each element represents some property of a record
+------------------------------------------------------------------------------------
+Interfaces: Creates a new type, describing the property names and value types of an object
+
+General Strategy for Reusable code in TS
++ Create functions that accept arguments that are typed with interfaces
++ Objects/classes can decide to 'implement' a given interface to work with a function
+------------------------------------------------------------------------------------
+Classes
+- Blueprint to create an object with some fields (values) and method (functions) to represne a 'thing'
+------------------------------------------------------------------------------------
+Design Patterns with TS
+Typical TypeScript file
++ Inerface definitions for working with this class
++ Class definition

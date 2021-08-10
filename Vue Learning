@@ -8,3 +8,7 @@ comminicate from child to parent by emitting events
 vuex
 - vuex is a state management pattern + lib for vuejs app. It serves as a centralized store for all the comps in an app, with rules ensuring that the
 the state can only be mutated in a predictable fashion.
+------------------------------------------------------------------------------------
+ diff between redux and vuex
+- redux always contains a single root reducer. combineReducers func takes many reducers and merge them into one, root reducer. A reducer is a func that accepts an accumulation and a value and returns a new accumulation.
+- while redux uses reducers Vuex uses mutations. In redux state is always immutable, while in vuex committing mutation by the store is the only way to change data.
