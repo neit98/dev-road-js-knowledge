@@ -1,0 +1,110 @@
+Reactjs Interview questions ver 2
+------------------------------------------------------------------------------------
+- What is closure?
+	Code challenge: add(x)(y) 
+- What is hoisting?
+- What is callback?
+	Code challenge: Re-implement .forEach or .map
+- let vs const vs var keyword?
+- Explain block scope in JavaScript?
+- Explain equality in JavaScript?
+- Compare cookies vs localStorage vs sessionStorage?
+- Describe the main difference between a .forEach loop and a .map() loop and why you would pick one versus the other?
+- Explain .filter, .map, .reduce, .every, .some
+- Explain synchronous and asynchronous, how to handle asynchronous in js?
+- Solution to overcome the callback hell?
+- Explain Promise.all vs Promise.race
+	Code challenge: Re-implement Promise.all
+- Explain async-await
+------------------------------------------------------------------------------------
+- Explain Function.prototype.bind
+- Why use TypeScript? Explain the pros and cons of TypeScript.
+------------------------------------------------------------------------------------
+- What is IIFEs (Immediately Invoked Function Expressions)?
+- Explain the difference between Object.freeze() vs const
+- Explain JavaScript runtime asynchronous model?
+- Explain the prototype chain? and its benefits?
+- Explain iterator and Generator?
+------------------------------------------------------------------------------------
+- What is TDD?
+- What is code coverage?
+- Tools and library for frontend testing.
+------------------------------------------------------------------------------------
+- What is the red, green, refactor approach?
+- Which testing tools are you comfortable with and what are the benefits of that tool?
+------------------------------------------------------------------------------------
+- What is Automation testing? what are the benefits
+------------------------------------------------------------------------------------
+- Explain JWT? How do we use JWT?
+- What is the difference between Authentication vs Authorization?
+------------------------------------------------------------------------------------
+- What is an SSL Certificate
+- What is Cross Site Scripting (XXS)?
+- What is a DDOS attack?
+- What is SQL injection?
+- What is CORS?
+------------------------------------------------------------------------------------
+- How does SSL/TLS work?
+- What is Security testing?
+- Explain SSL Handshake mechanism?
+- How can i prevent XSS?
+------------------------------------------------------------------------------------
+- Why do you choose React? What are the advantages and limitations?
+- Compare with other UI frameworks: react, angular, vue, ember...
+- What are two0way data binding and one-way data flow, and how are they different?
+------------------------------------------------------------------------------------
+- Describe about data flow (uni-directional) in react?
+- What is the difference between props and state?
+	When to use state?
+- List out lifecycle callbacks in order?
+	What is the purpose of shouldComponentUpdae and when to use it?
+	What is the purpose of componentWillUnmount and when to use it?
+- What is props validation? How to implement that?
+- Explain Pure Component, Controlled and uncontrolled component?
+- Compare function vs class-based components?
+	When to use class component over function components?
+- Describe how events are handled in React.
+- Explain the rules of Hooks? Why the hooks must be called at top level of func component?
+- How to handle logic like shouldComponentUpdate, componentWillUnmount in func comp?
+------------------------------------------------------------------------------------
+- What is a pure function?
+- What is higher order component(HOC)? What can we do with HOCs?
+- What is React Hook? What are advantages of using React Hooks?
+- Describe useState
+- Describe useEffect?
+- What is server side rendering?
+- Explain Composition over inheritance principle? How to archive it on React?
+------------------------------------------------------------------------------------
+- What is state management and why do we need that?
+- What is redux?
+	elements of redux?
+	principles of redux?
+------------------------------------------------------------------------------------
+- Describe Flux vs MVC?
+- What is Context API?
+	How does it work?
+- How to handle side effects in Redux?
+- Compare between Redux with other state management solution like Mobx, MobxStateTree?
+- How to reduce the boilerplate code when using redux or state management?
+------------------------------------------------------------------------------------
+- How do you handle from events and manage its state?
+------------------------------------------------------------------------------------
+- What is formik? How does it work?
+------------------------------------------------------------------------------------
+- What is react router
+- How does react-router work?
+------------------------------------------------------------------------------------
+- What is code splitting? Why do we need that?
+- What is memoization? How does it work?
+- Explain how browser identify which assets is updated to fetch the new one? How tell the browser dont cache the index.html?
+- Explain browser critical rendering path and pixel pipeline?
+- What is the wrok of requestAnimationFrame()?
+- Explain the way to put <style>, <script> tag in html document and the reason?
+- Explain prefetch, preload, preconnect, prerender of <link> tag?
+------------------------------------------------------------------------------------
+- What is REST?
+- How to integrate a REST API?
+------------------------------------------------------------------------------------
+- Way of working
+- Why is consistent style important, and what tools can be used to assure it?
+------------------------------------------------------------------------------------
