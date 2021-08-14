@@ -162,3 +162,9 @@ Truthys
 + Number other than zero
 + Date: new Date()
 - In JavaScript, function and array are also object.
+------------------------------------------------------------------------------------
+- Object.fromEntries(): convert array -> object
+- Object.keys(): returns an array of a given object's own enumerable property names, iterated in the same other that a normal loop would.
+------------------------------------------------------------------------------------
+- Replace array.indexOf by array.includes
+- Replace combination between filter() and map() by Array.reduce
