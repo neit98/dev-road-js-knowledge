@@ -49,6 +49,7 @@
 * It uses **VirtualDom** instead of RealDom considering that RealDOM manipulations are expensive.
 * Supports server-side rendering.
 * Follows Unidirectional data flow or data binding.
+* Uses reusable/composable UI components to develop the view.
 
 -------------
 ### redux
@@ -62,3 +63,5 @@
 - **Hash Router**: it uses URL hash, it puts no limitations on supported browser or web server. Server-side routing is independent from client-side routing.
 - Backward-compatible single-page app can use it as example.com/#/react/route. The setup cannot be backed by server-side rendering because it's / path that is served on server side, #react/route URL hash cannot be read from server side. On client side, window.location.hash is parsed by React router. React router renders a component that it was configured to render for /react/route, similarly to BrowserRouter.
 - Most importantly, HashRouter use cases aren't limited to SPA. A website may have legacy or search engine-friendly server-side routing, while React application may be a widget that maintains its state in URL like example.com/server/side/route#/react/route. Some page that contains React application is served on server side for /server/side/route, then on client side React router renders a component that it was configured to render for /react/route, similarly to previous scenario. 
+-------------
+### 

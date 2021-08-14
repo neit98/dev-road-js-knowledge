@@ -1,0 +1,12 @@
+Restful api status code
+- 200: OK
+- 201: Created
+- 202: Accepted
+- 204: No Content (is usually sent out in response to PUT, POST or DELETE request)
+- 400: Bad request (client-side error status)
+- 401: Unauthorized
+- 403: Forbidden (A 403 error response indicates that the client's request is formed correctly, but the REST API refuse to honor it, the user does not have the necessary the permissions for the resource)
+- 404: Not found
+- 405: Method not allowed
+- 500: Internal Server Error
+- 501: Not implemented (The server does not recognize the request method, or it cannot fulfill the request)

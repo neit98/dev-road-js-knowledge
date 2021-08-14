@@ -148,3 +148,17 @@ const getUnique = (arr, comp) => {
 ------------------------------------------------------------------------------------
 delete HTML tag
 const stripHTMLTags = str => str.replace(/<[^>]*>/g, '');
+------------------------------------------------------------------------------------
+Falseys value:
++ empty string
++ 0
++ null
++ undefined
++ NaN
+Truthys
++ Object: {}
++ Array: []
++ Not empty string
++ Number other than zero
++ Date: new Date()
+- In JavaScript, function and array are also object.

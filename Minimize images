@@ -1,0 +1,13 @@
+Minimize images
+- if u want transparency: use PNG.
+- if u want animations: use GIF.
+- if u want colorful images: use JPG.
+- if u want simple icons, logos, and illustrations: use SVGs.
+- reduce PNG with TinyPNG.
+- reduce JPG with JPEG-optimizer.
+- try to choose simple illustrations over highly detailed photographs.
+- always lower JPEG image quality (30-60%).
+- resize image based on size it will be displayed.
+- display different size image for different background.
+- use CDNS like imgIX.
+- remove image metadata.

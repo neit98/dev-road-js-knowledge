@@ -1,0 +1,19 @@
+FE Knowledge
+------------------------------
+localStorage, sessionStorage and cookie
+- localStorage
++ khả năng lưu trữ vô thời hạn: chỉ bị xoá bằng JavaScript, hoặc xoá bằng bộ nhớ browser hoặc xoá bằng localStorage API.
++ lưu trữ đc 5mb
++ ko gửi thông tin lên server.
+- sessionStorage:
++ giống hệt localStorage, khác 1 chỗ là mất dữ liệu khi user đóng tab.
+- cookie:
++ thông tin được gửi lên server
++ cookie chủ yếu là để đọc ở phía server, localStorage và sessionStorage chỉ có thể đọc ở phía client.
++ có thời gian sống (timeout)
++ cho phép lưu tối đa 4kb, có thể lưu vài chục cookie cho một domain
+------------------------------
+Cross-Origin Resource Sharing (CORS)
+- What: phía client sẽ tạo request để yêu cầu server làm 1 việc gì đó. Những request này sẽ đc đính kèm một header tên là Origin để chỉ định origin của client code (giá trị của header này chính là domain của web).
+- Server sẽ xem xét Origin để đc nguồn này có phải là hợp lệ hay không. Nếu hợp lệ, server sẽ trả về response với header Access-Control-Allow-Origin. Header này sẽ cho biết xem client có phải nguồn hợp lệ để browser tiếp tục thực hiện quá trình request.
+- In normal case, Access-Control-Allow-Origin value same Origin.

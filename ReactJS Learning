@@ -1,0 +1,20 @@
+ReactJS Learning
+----------------------
+- Vấn đề của Function Component
+ Một function component giống như một hàm render() trong class component, là chức năng sẽ render lại khi state/props thay đổi.
+Điều đó có nghĩa:
+* Nếu một function được gọi bên trong một component, nó sẽ được render lại, lặp đi lặp lại sau mỗi lần render.
+* Nếu một function được tạo bên trong một component và được xem như một component con, thì nó sẽ được tạo lại, điều đó con trỏ sẽ thay đổi, khiến những thành phần con render lại hoặc gọi lại những function không cần thiết.
+- Để giải quyết những sự cố về hiệu suất của app xảy ra. React cung cấp cho chúng ta 2 hook: useMemo và useCallback.
+useMemo: chặn render lại những function không cần thiết.
+useCallback: ngăn các hàm được tạo bên trong các component được tạo lại trên mỗi lần hiển thị (component con được sử dụng trong component cha)
+
+- Chờ đã: Đừng lạm dụng những React hook này!
+Trong khi 2 hook này cung cấp giải pháp giải quyết vấn đề của function component, chính vì vậy chúng dễ bị lạm dụng, thậm chí có thể gây hại nhiều hơn.
+- Ví dụ, chúng ta không ngăn hàm gọi lại cảu một tính toán (giống như demo trên). Chỉ dùng useMemo khi thất sự phải ngăn chặn gọi lại của một hàm tiêu tốn nhiều tài nguyên hoặc cần nhiều thời gian. Tại sao ? Bởi vì useMemo lưu trữ các kết quả của việc thực thi hàm vào bộ nhớ, điều này có thể sẽ lớn dần lên và không may nó lại làm giảm hiệu suất ứng dụng của bạn.
+Đối với useCallback thì càng tồi tệ hơn: Khi không dùng useCallback thì version cũ của hàm sẽ được thu gom lại, nhưng nếu dùng useCallback nó sẽ được giữ lại ở trong bộ nhớ, trong trường hợp một trong các phần phụ thuộc sẽ hoạt động đúng trở lại để trả về version cũ của hàm đó.
+Vậy khi nào nên dùng useCallback ? Khi mà bạn cảm thâý thật sự không dùng nó thì hiệu suất của ứng dụng của bạn sẽ rất tồi tệ hoặc kết quả của việc thực thi một hàm không cần thiết. (ví dụ như gọi một API).
+
+Kết luận
+* useMemo giữ cho một hàm không được thực thi lại nếu nó không nhận được một tập hợp các tham số đã được sử dụng trước đó. Nó sẽ trả về kết quả của một function. Sử dụng nó khi bạn muốn ngăn một số thao tác nặng hoặc tốn kém tài nguyên được gọi trên mỗi lần render.
+* useCallback giữ cho một hàm không được tạo lại lần nữa, dựa trên mảng các phần phụ thuộc. Nó sẽ trả về chính function đó. Sử dụng nó khi mà bạn muốn truyền fuction vào component con và chặn không cho một hàm nào đó tiêu thời gian, tài nguyên phải tạo lại.
