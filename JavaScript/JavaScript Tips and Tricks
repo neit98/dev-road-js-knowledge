@@ -1,4 +1,4 @@
-JavaScript & HTML/CSS Tips and Tricks
+JavaScript Tips and Tricks
 ------------------------------------------------------------------------------------
 - For Multiple Conditions, use Array.includes
 
@@ -168,3 +168,15 @@ Truthys
 ------------------------------------------------------------------------------------
 - Replace array.indexOf by array.includes
 - Replace combination between filter() and map() by Array.reduce
+------------------------------------------------------------------------------------
+groupBy property name of list
+const groupBy = (groups, prop) => {
+  const result = groups.reduce((acc, item) => {
+    const val = item[prop];
+    acc[val] = acc[val] || [];
+    acc[val].push(item);
+    return acc;
+  }, {});
+
+  return result;
+};

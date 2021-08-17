@@ -12,3 +12,6 @@ the state can only be mutated in a predictable fashion.
  diff between redux and vuex
 - redux always contains a single root reducer. combineReducers func takes many reducers and merge them into one, root reducer. A reducer is a func that accepts an accumulation and a value and returns a new accumulation.
 - while redux uses reducers Vuex uses mutations. In redux state is always immutable, while in vuex committing mutation by the store is the only way to change data.
+------------------------------------------------------------------------------------
+ref
+- takes an inner value and returns a reactive and mutable ref object. The ref object has a single property .value that points to the inner value.
